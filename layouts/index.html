@@ -1,0 +1,26 @@
+{{ partial "header" . }}
+</head>
+<body>
+    <header>
+        <h1>繧ｿ繧､繝医Ν縺ｪ縺ｩ縺</h1>
+    </header>
+    <main>
+        {{ range sort .Paginator.Pages }}
+            <div class="blog_link">
+                <a href="{{ .Permalink }}">
+                    <h3 class="ib">{{ .Title }}</h3>
+                    <p class="ib">[{{ .Date.Format "2006.1.2" }}]</p>
+                </a>
+                <p class="data">
+                    writer : {{.Params.writer}}
+                    tag 
+                    {{ if .Params.tags }}
+                    {{ partial "tags" .Params.tags }}
+                    {{ end }}
+                </p>
+            </div>
+        {{ end }}
+    </main>
+    {{ partial "footer" . }}
+  </body>
+</html>
