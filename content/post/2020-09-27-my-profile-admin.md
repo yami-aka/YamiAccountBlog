@@ -11,4 +11,14 @@ content: |-
   i think one times one equals infinite possibilities  
 
   bye
+tag:
+  - admin
 ---
+hello i'm Admin\
+my number is one\
+one times one equals one\
+this is everybody knows\
+but is this true?\
+i think one times one equals infinite possibilities  
+
+bye
