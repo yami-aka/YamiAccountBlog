@@ -16,4 +16,4 @@ collections:
       - {label: "タイトル", name: "title", widget: "string"}
       - {label: "公開日", name: "date", widget: "datetime"}
       - {label: "タグ", name: "tag", widget: "list"}
-      - {label: "本文", name: "content", widget: "markdown"}
+      - {label: "本文", name: "body", widget: "markdown"}
