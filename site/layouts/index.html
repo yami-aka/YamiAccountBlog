@@ -12,7 +12,7 @@
                     <p class="ib">[{{ .Date.Format "2006.1.2" }}]</p>
                 </a>
                 <p class="data">
-                    writer : <a href="/writer/{{.Params.writer}}">{{.Params.writer}}</a>
+                    writer : {{.Params.writer}}
                     tag 
                     {{ if .Params.tags }}
                     {{ partial "tags" .Params.tags }}
