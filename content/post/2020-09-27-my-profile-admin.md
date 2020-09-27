@@ -1,6 +1,6 @@
 ---
 title: my profile admin
-date: 2020-09-27T08:00:43.826Z
+date: 2020-09-27T08:05:41.541Z
 writer: user1 admin
 content: |-
   hello i'm Admin\
