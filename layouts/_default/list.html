@@ -1,7 +1,7 @@
 {{ partial "header" . }}
 </head>
 <main>
-  <section id="game">
+  <section>
     <h2 id="tagshow"></h2>
     <div id="product_wrap">
       {{ $paginator := .Paginate (where .Data.Pages "Params.hidden" "ne" true) }}
@@ -22,6 +22,7 @@
       {{ end }}
     </div>
   </section>
+  <a href="/" class="toTop">←topに戻る</a>
 </main>
 {{ partial "footer" . }}
 <script type="text/javascript">
@@ -33,7 +34,7 @@
   tag = tag.slice( 0, -1 );
   console.log(tag);
   const tag_show = document.getElementById("tagshow");
-  tagshow.innerHTML = "ジャンル検索:" + tag;
+  tagshow.innerHTML = "タグ:" + tag;
   console.log("aaaaaaaaa");
 </script>
 </body>
