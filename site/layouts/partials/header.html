@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" {{ with .Site.LanguageCode }} lang="{{ . }}"{{ end }}>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+{{ if eq .IsHome false }}
+<title>{{ .Title }} | 繧ｿ繧､繝医Ν縺ｪ縺ｩ縺</title>
+{{ else }}
+<title>繧ｿ繧､繝医Ν縺ｪ縺ｩ縺</title>
+{{ end }}
+{{ if .Site.Params.Info.enableSocial }}
+{{- partial "social/opengraph" . -}}
+{{ end }}
+<meta property='og:type' content='website'>
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<meta property='og:title' content='繧ｿ繧､繝医Ν縺ｪ縺ｩ縺'>
+<meta property='og:description' content='繧ｿ繧､繝医Ν縺ｪ縺ｩ縺'>
+<meta property='og:url' content='https://yamiaka.net'>
+<meta property='og:site_name' content='繧ｿ繧､繝医Ν縺ｪ縺ｩ縺'>
+<meta property='og:type' content='
+  {{- if .IsPage -}}
+    article
+  {{- else -}}
+    website
+  {{- end -}}
+'>
+<meta name="twitter:description" content="繧ｿ繧､繝医Ν縺ｪ縺ｩ縺">
+<meta name="Keywords" content="">
+<meta name="description" content="繧ｿ繧､繝医Ν縺ｪ縺ｩ縺">
+<meta name='twitter:card' content='summary'>
+<meta property='og:image' content='https://yamiaka.net{{ .Params.imgUrl }}'>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>

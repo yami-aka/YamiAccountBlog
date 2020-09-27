@@ -1,6 +1,25 @@
-{{ define "main" }}
-
-{{ partial "jumbotron" (dict "imageUrl" "/img/7.jpg" "title" "This is where the heading goes" "subtitle" "This is where the subtitle goes") }}
-{{ .Content }}
-
-{{ end }}
+{{ partial "header" . }}
+</head>
+<body>
+  <main class="md">
+    <div id="title_data">
+      <div id="title_text">
+        <h1>{{ .Title }}</h1>
+        <p id="subinfo">
+          {{ if .Params.tags }}
+            {{ partial "tags" .Params.tags }}
+          {{ end }}
+           | {{ .Date.Format "2006.1.2" }}
+        </p>
+        <p id="writer">
+          writer {{.Params.writer}}
+        </p>
+      </div>
+    </div>
+      {{ .Content }}
+    </div>
+  </main>
+  <a href="/" class="toTop">←topに戻る</a>
+    {{ partial "footer" . }}
+</body>
+</html>
