@@ -1,19 +1,18 @@
 backend:
   name: github
-  repo:  yami-aka/YamiAccountBlog  # GitHubのリポジトリ 「https://github.com/」の後ろの部分
+  repo:  yami-aka/YamiAccountBlog
 
 media_folder: "static/images"
-
 public_folder: "images/"
 
 collections:
-  - label: "Blog" # 管理画面のサイドバーで使う
-    name: "post" # 管理画面のパスで使う 例：/admin/collections/blog
-    folder: "content/post" # Markdownを保存するディレクトリ。Hugoのsectionにあたる
-    create: true # 新しいページを作ることを許可する
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Markdownのファイル名 例：YYYY-MM-DD-title.md
-    fields: # ページ作成画面で使う。Front Matterの値を書く
+  - label: "blog"
+    name: "blog"
+    folder: "content/{{year}}/{{month}}"
+    create: true
+    slug: "{{day}}{{hour}}{{minute}}{{second}}"
+    fields:
       - {label: "タイトル", name: "title", widget: "string"}
       - {label: "公開日", name: "date", widget: "datetime"}
-      - {label: "タグ", name: "tags", widget: "list"}
+      - {label: "タグ", name: "tags", widget: "list", default: "none"}
       - {label: "本文", name: "body", widget: "markdown"}
