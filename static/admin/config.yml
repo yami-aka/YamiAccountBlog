@@ -14,5 +14,5 @@ collections:
     fields:
       - {label: "タイトル", name: "title", widget: "string"}
       - {label: "公開日", name: "date", widget: "datetime"}
-      - {label: "タグ", name: "tags", widget: "list", default: "none"}
+      - {label: "タグ", name: "tags", widget: "list"}
       - {label: "本文", name: "body", widget: "markdown"}
