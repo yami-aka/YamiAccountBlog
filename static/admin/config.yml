@@ -8,7 +8,8 @@ public_folder: "images/"
 collections:
   - label: "blog"
     name: "blog"
-    folder: "content/{{year}}/{{month}}"
+    folder: "content/"
+    path: '{{year}}/{{month}}/{{slug}}'
     create: true
     slug: "{{day}}{{hour}}{{minute}}{{second}}"
     fields:
